@@ -60,9 +60,9 @@ namespace ur
 
 		private:
 
-		jugador1( int );
-		jugador2( int );
-		estado [3][8];
+		jugador jugador1( int );
+		jugador jugador2( int );
+		char estado [3][8];
 	}
 }
 
