@@ -17,7 +17,7 @@ void printLogo()
   std::cout << R"(        \/     \/                      \/   )" << std::endl;
 }
 
-char printMenuPrincipal()
+char MenuPrincipal()
 {
   char opcion;
   std::cout << "Comandos: (J)ugar\t(S)alir\n";
@@ -25,7 +25,7 @@ char printMenuPrincipal()
   return opcion;
 }
 
-void printMenuJuego()
+char MenuJuego()
 {
   char opcion;
   std::cout << "Comandos: (T)irar\t(S)alir";
