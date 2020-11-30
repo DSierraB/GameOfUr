@@ -1,0 +1,10 @@
+#include "ur.h"
+
+ur::ficha::ficha( int n ){};
+
+void ur::ficha::setpos( int new_pos ){};
+
+int ur::ficha::getpos();
+
+void ur::ficha::setcolor( int new_color ){};
+
