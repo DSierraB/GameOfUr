@@ -1,5 +1,4 @@
 #include "interfaz.h"
-#include<iostream>
 
 void printLogo()
 {
@@ -15,6 +14,18 @@ void printLogo()
   std::cout << R"(/    |    \|     \    |    |  / |    |   \  )" << std::endl;
   std::cout << R"(\_______  /\___  /    |______/  |____|_  /  )" << std::endl;
   std::cout << R"(        \/     \/                      \/   )" << std::endl;
+}
+
+void printMenu()
+{
+  std::cout << "Comandos: (N)ueva partida\t(T)irar\t(S)alir";
+}
+
+void printInfo( partida partida_ )
+{
+  std::cout << "Jugador 1: " << partida_.jugador1.puntaje << std::endl;
+  std::cout << "Jugador 2: " << partida_.jugador2.puntaje << std::endl;
+  std::cout << "Turno: " << partida_.turno << std::endl;
 }
 
 void printBoard( char board[3][8] ){

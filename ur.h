@@ -1,3 +1,8 @@
+// librerias necesarias
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+
 #ifndef UR_H
 #define UR_H
 
@@ -56,10 +61,11 @@ namespace ur
 
 		partida( jugador, jugador );
 		void setestado();
-		char * getestado()
+		char * getestado();
 
 		private:
 
+		int turno;
 		jugador jugador1( int );
 		jugador jugador2( int );
 		char estado [3][8];
