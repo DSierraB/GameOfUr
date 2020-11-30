@@ -17,9 +17,28 @@ void printLogo()
   std::cout << R"(        \/     \/                      \/   )" << std::endl;
 }
 
-void printMenu()
+char printMenuPrincipal()
 {
-  std::cout << "Comandos: (N)ueva partida\t(T)irar\t(S)alir";
+  char opcion;
+  std::cout << "Comandos: (J)ugar\t(S)alir\n";
+  std::cin >> opcion;
+  return opcion;
+}
+
+void printMenuJuego()
+{
+  char opcion;
+  std::cout << "Comandos: (T)irar\t(S)alir";
+  std::cin >> opcion;
+  return opcion;
+}
+
+char SeleccionFicha()
+{
+  char id;
+  std::cout << "Ingrese la letra correspondiente a la ficha que desea mover:\n";
+  std::cin >> id;
+  return id;
 }
 
 void printInfo( ur::partida partida_ )
