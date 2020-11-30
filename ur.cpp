@@ -10,9 +10,9 @@ void ur::ficha::setcolor( int new_color ){};
 
 ur::tablero::tablero(){};
 
-void ur::settab(){};
+void ur::tablero::settab(){};
 
-bool ur::getstate( int pos_ ){};
+bool ur::tablero::getstate( int pos_ ){};
 
 ur::jugador::jugador( int nose_ ){};
 
@@ -34,9 +34,9 @@ void ur::jugador::mover( ficha id_ficha ){};
 
 void ur::jugador::turno( int n ){};
 
-ur::partida::partida( jugador jugador1_ , jugador jugador2_ ){};
+ur::partida::partida( jugador jugador1_( int n1 ) , jugador jugador2_( int n2 ) ){};
 
-void ur::partida::setestado();
+void ur::partida::setestado(){};
 
-char * ur::partida::getestado();
+char * ur::partida::getestado(){};
 

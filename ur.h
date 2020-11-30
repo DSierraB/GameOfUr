@@ -22,20 +22,20 @@ namespace ur
 		void setcolor( int );	//funcion para definir el color de la ficha
 		int pos;				//posicion de la ficha
 		int color;				//color de la ficha (blanco o negro)
-	}
+	};
 
 	class tablero
 	{
 		public:
-
-		tablero;	
+	  
+	        tablero();	
 		void settab();
 		bool getstate( int );		//funcion para recuperar el estado de una casilla (segura o no)
 		
 		private:
 
 		bool tab[16];				//vector con los estados de las casillas
-	}
+	};
 
 	class jugador
 	{
@@ -52,24 +52,24 @@ namespace ur
 		int puntaje;
 		ficha fichas[7];
 		tablero tablero1;
-	}
+	};
 
 	class partida
 	{
 
 		public:
 
-		partida( jugador, jugador );
+	        partida( jugador, jugador );
 		void setestado();
 		char * getestado();
 
 		private:
 
 		int turno;
-		jugador jugador1( int );
-		jugador jugador2( int );
+		jugador jugador1;
+		jugador jugador2;
 		char estado [3][8];
-	}
+	};
 }
 
 #endif

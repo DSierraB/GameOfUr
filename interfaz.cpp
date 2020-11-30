@@ -1,4 +1,5 @@
 #include "interfaz.h"
+#include "ur.h"
 
 void printLogo()
 {
@@ -21,7 +22,7 @@ void printMenu()
   std::cout << "Comandos: (N)ueva partida\t(T)irar\t(S)alir";
 }
 
-void printInfo( partida partida_ )
+void printInfo( ur::partida partida_ )
 {
   std::cout << "Jugador 1: " << partida_.jugador1.puntaje << std::endl;
   std::cout << "Jugador 2: " << partida_.jugador2.puntaje << std::endl;
