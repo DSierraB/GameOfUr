@@ -4,9 +4,17 @@
 int main()
 {
 
-	ur::jugador jugador1(0);
-	ur::jugador jugador2(1);
-	ur::partida partida1(jugador1,jugador2);
+	ur::partida partida1;
 
+  printLogo();
+	printBoard( partida1.getestado() );
+
+	while ((partida1.jugador1.getpuntaje() < 7) or (partida1.jugador2.getpuntaje() < 7))
+	{
+		partida1.ronda();
+	  printBoard( partida1.getestado() );
+	}
+
+	return 0;
 }
   

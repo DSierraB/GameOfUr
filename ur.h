@@ -13,9 +13,9 @@ namespace ur
 	{
 		public:
 
-		ficha();			//constructor
-		void setpos( int );		//funcion para cambiar la posicion de la ficha
-		int getpos();			//funcion para recuparar la posicion de la ficha
+		ficha();
+		void setpos( int );
+		int getpos();
 
 		private:
 
@@ -27,12 +27,12 @@ namespace ur
 		public:
 	  
 		tablero();	
-		int getcasilla( int );		//funcion para recuperar el estado de una casilla (segura o no)
+		int getcasilla( int );
 		
 		private:
 
 		void settab();
-		int tab[16];				//vector con los estados de las casillas
+		int tab[16];
 	};
 
 	class jugador
@@ -68,9 +68,9 @@ namespace ur
 		int turno;
 		jugador jugador1;
 		jugador jugador2;
-		//void checkeat( jugador, jugador );
 		void setestado();
-		char (* getestado() )[8] ;
+		void ronda();
+		char (* getestado() )[8];
 
 		private:
 

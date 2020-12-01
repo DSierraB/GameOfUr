@@ -389,15 +389,15 @@ void ur::partida::setestado()
 	{
 	  if( jugador2.getficha(i) < 5 )
 		{
-		  estado[0][4-i] = 'O';
+		  estado[0][4-jugador2.getficha(i)] = 'O';
 		}
 	  else if( jugador2.getficha(i) < 13 )
 		{
-		  estado[1][i-5] = 'O';
+		  estado[1][jugador2.getficha(i)-5] = 'O';
 		}
 		else
 		{
-		  estado[0][20-i] = 'O';	
+		  estado[0][20-jugador2.getficha(i)] = 'O';	
 		}
 	}
 
@@ -405,18 +405,53 @@ void ur::partida::setestado()
 	{
 	  if( jugador1.getficha(i) < 5 )
 		{
-		  estado[0][4-i] = letras[i];
+		  estado[0][4-jugador1.getficha(i)] = letras[i];
 		}
 	  else if( jugador2.getficha(i) < 13 )
 		{
-		  estado[1][i-5] = letras[i];
+		  estado[1][jugador1.getficha(i)-5] = letras[i];
 		}
 		else
 		{
-		  estado[0][20-i] = letras[i];	
+		  estado[2][20-jugador1.getficha(i)] = letras[i];	
 		}
 	}
 };
+
+void ur::partida::ronda()
+{
+
+	while(jugador1.turno())
+	{
+
+	}
+
+	while(jugador2.turno())
+	{
+
+	}
+
+	int punt1 = 0;
+	int punt2 = 0;
+
+	for ( int i=0; i < 7; i++ )
+	{
+		if (jugador1.getficha(i) > 15)
+		{
+			punt1++;
+		}
+
+		if (jugador2.getficha(i) > 15)
+		{
+			punt2++;
+		}
+	}
+
+	jugador1.setpuntaje(punt1);
+	jugador2.setpuntaje(punt2);
+
+	setestado();
+}
 
 char (* ur::partida::getestado())[8]
 {
