@@ -40,7 +40,7 @@ namespace ur
 
 		public:
 
-		jugador( int );
+		jugador();
 		int tirar();
 		int getpuntaje();
 		int getcolor();
@@ -63,14 +63,14 @@ namespace ur
 
 		public:
 
-		partida( jugador( int ), jugador( int ) );
+		partida();
 
 		int turno;
 		jugador jugador1;
 		jugador jugador2;
 		//void checkeat( jugador, jugador );
 		void setestado();
-		char * getestado();
+		char (* getestado() )[8] ;
 
 		private:
 

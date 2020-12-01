@@ -39,11 +39,9 @@ int ur::tablero::getcasilla( int pos_ )
 	return tab[pos_];
 };
 
-ur::jugador::jugador( int col_ )
+ur::jugador::jugador()
 {
-	setcolor(col_);
 	setpuntaje(0);
-
 };
 
 int ur::jugador::puntaje = 0;
@@ -369,11 +367,9 @@ void ur::jugador::setcolor( int col_ )
 	color = col_;
 };
 
-ur::partida::partida( jugador jugador1_( int n1 ), jugador jugador2_( int n2 ) )
+ur::partida::partida()
 {
-	jugador jugador1 = jugador1_(n1);
-	jugador jugador2 = jugador2_(n2);
-	setestado();
+  setestado();
 };
 
 void ur::partida::setestado()
@@ -385,44 +381,44 @@ void ur::partida::setestado()
 	{
 		for( int j=0; j < 8; j++)
 		{
-			estado[i][j] = " ";
+			estado[i][j] = ' ';
 		}
 	};
 
 	for( int i=0; i < 7; i++ )
 	{
-		if jugador2.getficha(i) < 5
+	  if( jugador2.getficha(i) < 5 )
 		{
-			estado[0][4-i] = "O"
-		};
-		else if jugador2.getficha(i) < 13
+		  estado[0][4-i] = 'O';
+		}
+	  else if( jugador2.getficha(i) < 13 )
 		{
-			estado[1][i-5] = "O"
+		  estado[1][i-5] = 'O';
 		}
 		else
 		{
-			estado[0][20-i] = "O"	
+		  estado[0][20-i] = 'O';	
 		}
 	}
 
 	for( int i=0; i < 7; i++ )
 	{
-		if jugador1.getficha(i) < 5
+	  if( jugador1.getficha(i) < 5 )
 		{
-			estado[0][4-i] = letras[i]
-		};
-		else if jugador2.getficha(i) < 13
+		  estado[0][4-i] = letras[i];
+		}
+	  else if( jugador2.getficha(i) < 13 )
 		{
-			estado[1][i-5] = letras[i]
+		  estado[1][i-5] = letras[i];
 		}
 		else
 		{
-			estado[0][20-i] = letras[i]	
+		  estado[0][20-i] = letras[i];	
 		}
 	}
 };
 
-char * ur::partida::getestado()
+char (* ur::partida::getestado())[8]
 {
 	return estado;
 };
