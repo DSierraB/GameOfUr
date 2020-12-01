@@ -38,13 +38,13 @@ char SeleccionFicha()
   char id;
   std::cout << "Ingrese la letra correspondiente a la ficha que desea mover:\n";
   std::cin >> id;
-  return id;
+  return char(std::toupper(id)); // Retorna la letra de la ficha en mayúscula
 }
 
 void printInfo( ur::partida partida_ )
 {
-  std::cout << "Jugador 1: " << partida_.jugador1.puntaje << std::endl;
-  std::cout << "Jugador 2: " << partida_.jugador2.puntaje << std::endl;
+  std::cout << "Jugador 1: " << partida_.jugador1.getpuntaje() << std::endl;
+  std::cout << "Jugador 2: " << partida_.jugador2.getpuntaje() << std::endl;
   std::cout << "Turno: " << partida_.turno << std::endl;
 }
 
