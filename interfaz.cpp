@@ -38,7 +38,7 @@ char SeleccionFicha()
   char id;
   std::cout << "Ingrese la letra correspondiente a la ficha que desea mover:\n";
   std::cin >> id;
-  return id;
+  return char(std::toupper(id)); // Retorna la letra de la ficha en mayúscula
 }
 
 void printInfo( ur::partida partida_ )
